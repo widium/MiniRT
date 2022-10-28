@@ -15,83 +15,72 @@
 
 #include "minirt.h"
 
+typedef struct s_vector
+{
+   float   x;
+   float   y;
+   float   z;
+} t_vector;
+
+typedef struct s_pos
+{
+   float   x;
+   float   y;
+   float   z;
+} t_pos;
+
+typedef struct s_color
+{
+    int   red;
+    int   green;
+    int   blue;
+    int   hexa;
+
+} t_color;
 
 typedef struct s_ambiant
 {
     float ratio;
-    int   red;
-    int   green;
-    int   blue;
+    t_color color;
 }   t_ambiant;
 
 typedef struct s_camera
 {
-    float   x;
-    float   y;
-    float   z;
-    float   vector_x;
-    float   vector_y;
-    float   vector_z;
+    t_pos    position;
+    t_vector vector;
     int     fov;
 }   t_camera;
 
 typedef struct s_light
 {
-    float   x;
-    float   y;
-    float   z;
     float   ratio;
-    int   red;
-    int   green;
-    int   blue;
+    t_pos   position;
+    t_color color;
 }   t_light;
 
 typedef struct s_sphere
 {
-    float   x;
-    float   y;
-    float   z;
     float   diameter;
-    int   red;
-    int   green;
-    int   blue;
+    t_pos   position;
+    t_color color;
 }   t_sphere;
 
 typedef struct s_cylinder
 {
-    float   x;
-    float   y;
-    float   z;
+
     float   diameter;
     float   height;
-    int   red;
-    int   green;
-    int   blue;
-    float   vector_x;
-    float   vector_y;
-    float   vector_z;
+    t_pos   position;
+    t_color color;
+    t_vector vector;
 
 }   t_cylinder;
 
 typedef struct s_plan
 {
-    float   x;
-    float   y;
-    float   z;
-    float   vector_x;
-    float   vector_y;
-    float   vector_z;
-    int   red;
-    int   green;
-    int   blue;
+    t_pos   position;
+    t_vector vector;
+    t_color color;
 }   t_plan;
-
-
-
-
-
-
-
-
 
 #endif

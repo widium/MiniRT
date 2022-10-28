@@ -1,30 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minirt.h                                           :+:      :+:    :+:   */
+/*   rgb.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ebennace <ebennace@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/28 10:05:10 by ebennace          #+#    #+#             */
-/*   Updated: 2022/10/28 10:05:11 by ebennace         ###   ########.fr       */
+/*   Created: 2022/10/28 16:16:23 by ebennace          #+#    #+#             */
+/*   Updated: 2022/10/28 16:16:38 by ebennace         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MINIRT_H
-# define MINIRT_H
+#include "../header/minirt.h"
 
-# include <stdio.h>
-# include <fcntl.h>
-# include <unistd.h>
-# include <stdlib.h>
-# include <stddef.h>
-# include <mlx.h>
-
-# include "../libft/libft.h"
-# include "class.h"
-
-void load_file(char *path);
-
-int    rgb_to_hexadecimal(int t, int r, int g, int b);
-
-#endif
+int    rgb_to_hexadecimal(int t, int r, int g, int b)
+{
+    return (t << 24 | r << 16 | g << 8 | b);
+}
